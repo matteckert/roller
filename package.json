@@ -1,0 +1,27 @@
+{
+  "name": "roller",
+  "version": "0.1.0",
+  "description": "fluent dice roller",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matteckert/roller.git"
+  },
+  "keywords": [
+    "dice",
+    "die"
+  ],
+  "author": "Matt Eckert <me@matteckert.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matteckert/roller/issues"
+  },
+  "homepage": "https://github.com/matteckert/roller",
+  "devDependencies": {
+    "should": "~3.2.0",
+    "mocha": "~1.18.2"
+  }
+}
