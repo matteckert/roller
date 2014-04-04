@@ -61,6 +61,13 @@ describe('roller', function() {
         it('can sum all the dice', function() {
             roller(roller(2,6), roller(1,6)).sum().roll().should.be.within(3, 18);
         });
+
+        it('can count all the dice', function() {
+            var randomBefore = Math.random;
+            Math.random = function() { return .99; };
+            roller(roller(2,6), roller(1,6)).count(5).roll().should.equal(3);
+            Math.random = randomBefore;
+        });
     });
 });
 
