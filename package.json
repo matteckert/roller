@@ -2,7 +2,7 @@
   "name": "roller",
   "version": "0.1.0",
   "description": "fluent dice roller",
-  "main": "index.js",
+  "main": "lib/roller.js",
   "scripts": {
     "test": "mocha"
   },
