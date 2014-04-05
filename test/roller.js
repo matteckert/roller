@@ -2,7 +2,7 @@ require('should');
 
 var roller = require('../lib/roller.js');
 
-describe('roller', function() {
+describe('leafRoller', function() {
     describe('with one die', function() {
         it('returns a number', function() {
             roller(1,6).roll().should.be.a.Number;
@@ -24,6 +24,11 @@ describe('roller', function() {
     describe('with multiple dice', function() {
         it('returns an array', function() {
             roller(2,8).roll().should.be.an.Array;
+
+        });
+
+        it('can be summed', function() {
+            roller(2,8).sum().roll().should.be.a.Number;
         });
 
         it('is in range', function() {
@@ -46,6 +51,13 @@ describe('roller', function() {
 
         it('has an explode limit', function() {
             roller(4,6).explode(1).roll().length.should.equal(100);
+        });
+
+        it('can count the dice', function() {
+            var randomBefore = Math.random;
+            Math.random = function() { return .99; };
+            roller(4,6).count(3).roll().should.equal(4);
+            Math.random = randomBefore;
         });
     });
 
