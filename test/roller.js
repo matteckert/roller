@@ -2,7 +2,7 @@ require('should');
 
 var roller = require('../lib/roller.js');
 
-describe('leafRoller', function() {
+describe('roller', function() {
     describe('with one die', function() {
         it('returns a number', function() {
             roller(1,6).roll().should.be.a.Number;
