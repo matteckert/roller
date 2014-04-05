@@ -66,6 +66,10 @@ describe('leafRoller', function() {
             roller(roller(1,6), roller(1,6)).roll().should.be.an.Array;
         });
 
+        it('can repeat rolls', function() {
+            roller(3,6).sum().repeat(3).roll().length.should.equal(3);
+        });
+
         it('returns an array of array if more than one die', function() {
             roller(roller(2,6), roller(1,6)).roll()[0].should.be.an.Array;
         });
